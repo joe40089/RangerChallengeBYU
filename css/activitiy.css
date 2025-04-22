@@ -1,0 +1,71 @@
+body {
+    background: url("../assets/img/Battleship.jpg") no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Segoe UI', sans-serif;
+    color: black;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .board {
+    display: grid;
+    grid-template-columns: repeat(10, 40px);
+    grid-template-rows: repeat(10, 40px);
+    gap: 4px;
+    justify-content: center;
+    margin: 20px auto;
+  }
+  
+  .cell {
+    width: 40px;
+    height: 40px;
+    background-color: #005288;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .cell.hit {
+    background-color: red;
+  }
+  
+  .cell.miss {
+    background-color: gray;
+  }
+  
+  #status {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #00ccff;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #001f3f;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  button:hover {
+    background-color: #00aacc;
+  }
+  .cell.hit {
+    background-color: #ff4444;
+    animation: pop 0.3s ease-in-out;
+  }
+  
+  @keyframes pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+  }  
+
+  .board {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 10px;
+  }
